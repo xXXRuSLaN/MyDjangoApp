@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pulse</title>
+        {% block set %}
+
+        {% endblock %}
+
+    </head>
+    <body>
+
+        <div class='container'>
+            <style>
+                .headmenu {
+                    background-color: rgba(77, 163, 31, 0.5);
+                    text-align: center;
+                    padding: 2.5em;
+                    border-radius: 1em;
+                }
+                .headmenu a {
+                    color: rgb(58, 58, 58);
+                    text-decoration: none;
+                    font-size: 1em;
+                    margin: 10px;
+                    transition: 0.2s;
+                }
+            
+                .headmenu a:hover {
+                    color: black;
+                    font-size: 25px;
+                    padding: 19px;
+                }
+            </style>
+            <div class="headmenu mt-2" style="    
+                background-color: rgba(77, 163, 31, 0.5);
+                text-align: center;        
+                padding: 2.5em;
+                border-radius: 1em;
+            ">
+                <a >крутые картинки</a>
+                <a href={% url 'mainPage' %}>тыкни сюда</a>
+                <a >obo mne</a>
+                <a >contacts</a>
+                <a href={% url 'sozdat' %}>sozdat</a>
+                {{ request.user }}
+            </div>
+            <div class="text-align-center">
+                {% block content %}
+    
+                {% endblock %}
+                <p>im gonna BUSSSTAH myself</p>
+            </div>
+        </div>
+
+
+
+
+    </body>
+</html>
